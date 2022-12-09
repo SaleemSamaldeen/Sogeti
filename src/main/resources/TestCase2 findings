@@ -1,0 +1,6 @@
+Test Case 2 cannot be automated 100% due to captcha images while submitting the form.
+
+This can be handled by either
+
+1. Disabling the captcha in lower environment for testing purpose (or)
+2. Execute the steps till captcha and add wait time to complete captcha manually (this is possible in only local machine)
