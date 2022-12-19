@@ -34,8 +34,6 @@ public class HomePage {
 
     private boolean country = false;
 
-    private boolean color = false;
-
     public static List<String> countryNames;
 
     public void clickWorldWide() {
