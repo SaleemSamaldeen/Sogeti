@@ -91,11 +91,8 @@ public class HomePage {
 
     public boolean checkBothServicesAndAutomationSelected(String expectedColor) {
         mouseHoverServices();
-        if (Color.fromString(driver.findElement(services).getCssValue("color")).asHex().equals(expectedColor)
-                && Color.fromString(driver.findElement(automation).getCssValue("color")).asHex().equals(expectedColor)) {
-            color = true;
-        }
-        return color;
+        return Color.fromString(driver.findElement(services).getCssValue("color")).asHex().equals(expectedColor)
+                && Color.fromString(driver.findElement(automation).getCssValue("color")).asHex().equals(expectedColor);
     }
 
 }
