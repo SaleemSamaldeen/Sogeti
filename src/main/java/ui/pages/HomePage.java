@@ -57,9 +57,7 @@ public class HomePage {
     public List<String> getAllCountryNames() {
         countryNames = new ArrayList<>();
         countries = driver.findElements(countryList);
-        for (WebElement countryName : countries) {
-            countryNames.add(countryName.getText().trim());
-        }
+        countries.forEach(element -> countryNames.add(element.getText().trim()));
         return countryNames;
     }
 
