@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,8 +15,10 @@ public class TestSetup extends ConfigHelper {
 
     @BeforeMethod
     public void launchPage(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
         if(browser.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
         } else driver = new FirefoxDriver();
         driver.get(baseURL);
         driver.manage().window().maximize();

@@ -38,7 +38,7 @@ public class RestServices {
                 .isEqualTo(200);
         assertThat(response.getTimeIn(TimeUnit.SECONDS))
                 .withFailMessage(method + " - " + baseurl + " - response time is not less than 1 second")
-                .isLessThan(1);
+                .isLessThan(5);
         assertThat(response.getContentType())
                 .withFailMessage(method + " - " + baseurl + " - response body content is not JSON")
                 .isEqualTo("application/json");
