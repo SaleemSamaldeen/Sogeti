@@ -51,7 +51,7 @@ public class HomePage {
 
     public void mouseHoverServices() {
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(services)).perform();
+        actions.moveToElement(driver.findElement(services)).build().perform();
     }
 
     public List<String> getAllCountryNames() {
