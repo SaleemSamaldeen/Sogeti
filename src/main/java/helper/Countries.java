@@ -1,6 +1,7 @@
 package helper;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -44,9 +45,9 @@ public enum Countries {
 
     public static List<String> countryNames() {
         List<String> names = new ArrayList<>();
-        for (Countries country : Countries.values()) {
-            names.add(String.valueOf(country));
-        }
+        Arrays.stream(Countries.values()).forEach(countries -> {
+            names.add(countries.name());
+        });
         return names;
     }
 }

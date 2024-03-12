@@ -18,6 +18,7 @@ public class TestSetup extends ConfigHelper {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         if(browser.equalsIgnoreCase("chrome")) {
+            /*WebDriverManager.chromedriver().setup();*/
             driver = new ChromeDriver(options);
         } else driver = new FirefoxDriver();
         driver.get(baseURL);
